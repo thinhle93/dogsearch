@@ -1,0 +1,9 @@
+<div>
+    <a href="/dog/saved">Back to Saved Dogs</a>
+    <h1><%= @dog['breeds'][0]['name'] %></h1>
+    <img src="<%= @dog['url'] %>" alt="picture of dog">
+        <p>Weight: <%= @dog['breeds'][0]['weight']['imperial'] %></p>
+        <p>Height: <%= @dog['breeds'][0]['height']['imperial'] %></p>
+        <p>Lfife Span: <%= @dog['breeds'][0]['life_span'] %></p>
+        <p>Breed Group: <%= @dog['breeds'][0]['breed_group'] %></p>
+</div>

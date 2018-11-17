@@ -1,0 +1,18 @@
+<div>
+    <h1>Welome <%= @user.first_name%> <%= @user.last_name%></h1>
+
+    <div>
+        <button><a href="/users/find">Find another dog</a></button> <button><a href="/dog/saved">Saved dogs</a></button>
+        <h3>Here is a dog you may be interested in</h3>
+        <img src="<%= @nsw[0]['url'] %>" alt="dog picture">
+        <div>
+            <h3>About this dog:</h3>
+            <button><a href="/dog/save">Save this dog's information for later?</a></button>
+            <p>Name: <%= @nsw[0]['breeds'][0]['name'] %></p>
+            <p>Weight: <%= @nsw[0]['breeds'][0]['weight']['imperial'] %></p>
+            <p>Height: <%= @nsw[0]['breeds'][0]['height']['imperial'] %></p>
+            <p>Lfife Span: <%= @nsw[0]['breeds'][0]['life_span'] %></p>
+            <p>Breed Group: <%= @nsw[0]['breeds'][0]['breed_group'] %></p>
+        </div>
+    </div>
+</div>

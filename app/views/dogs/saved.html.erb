@@ -1,0 +1,9 @@
+<div>
+    <a href="/users/find">Look for dogs</a>
+    <div>
+        <h1>Here are the dogs's information you have saved</h1>
+        <% @dogs.each do |el| %>
+            <p> <a href="/dog/find/<%= el.api_id%>"><%= el.name %></a></p>
+        <% end %>
+    </div>
+</div>
