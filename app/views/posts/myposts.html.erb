@@ -1,0 +1,25 @@
+<div class="my-top-container">
+        <a class="my-top-link" href="/logout">Logout</a>
+        <a class="my-top-link" href="/users/find">Home</a>
+</div>
+<div class="my-ctnr container">
+
+
+    <h3 class="my-big-text">Here are your posts:</h3>
+    <a class="my-link btn btn-primary" href="/post/all">All posts</a>
+    <div class="my-posts">
+        <% @myposts.each do |el| %>
+        <div>
+            <span class="my-posts-text">
+                <a class="my-post-link" href="/post/find/<%= el.id %>"><%= el.title %></a>
+                <span class="my-post-info">
+                        <%= el.comments.length%> comments
+                </span>
+                
+            </span>
+        </div>
+        
+    <% end %>
+    </div>
+    
+</div>

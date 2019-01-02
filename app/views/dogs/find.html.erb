@@ -1,9 +1,24 @@
-<div>
-    <a href="/dog/saved">Back to Saved Dogs</a>
-    <h1><%= @dog['breeds'][0]['name'] %></h1>
-    <img src="<%= @dog['url'] %>" alt="picture of dog">
-        <p>Weight: <%= @dog['breeds'][0]['weight']['imperial'] %></p>
-        <p>Height: <%= @dog['breeds'][0]['height']['imperial'] %></p>
-        <p>Lfife Span: <%= @dog['breeds'][0]['life_span'] %></p>
-        <p>Breed Group: <%= @dog['breeds'][0]['breed_group'] %></p>
+<div class="my-top-container">
+        <a class="my-top-link" href="/logout">Logout</a>
+        <a class="my-top-link" href="/users/find">Home</a>
+</div>
+<div class="my-ctnr container">
+        <div >
+                <a class="my-link btn btn-primary" href="/dog/saved">Back to Saved Dogs</a>
+        </div>
+
+    
+    <div class="row">
+            <div class="col-xl-6">
+                <img class="img-fluid my-img" src="<%= @dog['url'] %>" alt="picture of dog">
+            </div>
+            <div class="col-xl-6">
+                <span class="my-text"><%= @dog['breeds'][0]['name'] %></span>
+                <span class="my-text">Weight: <%= @dog['breeds'][0]['weight']['imperial'] %></span>
+                <span class="my-text">Height: <%= @dog['breeds'][0]['height']['imperial'] %></span>
+                <span class="my-text">Life Span: <%= @dog['breeds'][0]['life_span'] %></span>
+                <span class="my-text">Breed Group: <%= @dog['breeds'][0]['breed_group'] %></span>
+            </div>
+    </div>
+   
 </div>

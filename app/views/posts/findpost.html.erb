@@ -1,0 +1,36 @@
+<div class="my-top-container">
+    <a class="my-top-link" href="/logout">Logout</a>
+    <a class="my-top-link" href="/users/find">Home</a>
+</div>
+<div class="my-ctnr container">
+    <h1><%= @post.title %></h1>
+    <p>From: <%= @post.user.first_name%> <%= @post.user.last_name%></p>
+
+    <div>
+        <form action="/post/newcomment" method="post">
+            <div class="input-group mb-3"> 
+                <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+                <input type="hidden" name="postid" value="<%= @post.id %>">
+                <input type="text" name="comment_content" placeholder="New comment" class="my-input">
+                <input type="submit" value="submit" class="btn btn-outline-primary">
+            </div>
+           
+        </form>
+        <a href="/post/mypost">Cancel</a>
+        <div>
+                <% if flash[:errors]%>
+                <% flash[:errors].each do |err|%>
+                <p><%= err%></p>
+                <%end%>
+                <%end%>
+        </div>
+    </div>
+
+    <% @post_comments.each do |el| %>
+        <p><%= el.user.first_name%> <%= el.user.last_name%> said: <%= el.content%>
+        <% if el.user_id == session[:userid] %>
+        <a href="/delete/comment/<%= el.id%>/<%= @post.id%>">Delete</a>
+        <% end %>
+        </p>
+    <% end %>
+</div>

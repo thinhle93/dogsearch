@@ -1,9 +1,16 @@
-<div>
-    <a href="/users/find">Look for dogs</a>
+<div class="my-top-container">
+        <a class="my-top-link" href="/logout">Logout</a>
+        <a class="my-top-link" href="/users/find">Home</a>
+</div>
+<div class="my-ctnr container">
+
     <div>
-        <h1>Here are the dogs's information you have saved</h1>
+        <h1 class="my-big-text">Here are the dogs' information you have saved</h1>
         <% @dogs.each do |el| %>
-            <p> <a href="/dog/find/<%= el.api_id%>"><%= el.name %></a></p>
+        <div>
+            <span class="my-posts-text"> <a class="my-post-link" href="/dog/find/<%= el.api_id%>"><%= el.name %></a></span>
+        </div>
+            
         <% end %>
     </div>
 </div>

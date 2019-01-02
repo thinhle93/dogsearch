@@ -1,0 +1,29 @@
+<div class="my-top-container">
+        <a class="my-top-link" href="/logout">Logout</a>
+        <a class="my-top-link" href="/users/find">Home</a>
+</div>
+<div class="my-ctnr container">
+
+        
+    <div class="my-posts">
+    <form  action="/post/createnew" method="post">
+        <div class="input-group mb-3">
+            <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+            <input type="text" name="post_title" class="my-input" placeholder="Title of new post">
+            <input class="btn btn-outline-primary" type="submit" value="submit">
+        </div>
+        
+        
+        
+    </form>
+
+    <a href="/post/all">Cancel</a>
+    <div>
+            <% if flash[:errors]%>
+            <% flash[:errors].each do |err|%>
+            <p><%= err%></p>
+            <%end%>
+            <%end%>
+    </div>
+    </div>
+</div>

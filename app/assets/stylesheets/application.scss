@@ -1,0 +1,190 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+ */
+
+@import "bootstrap";
+html{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+body{
+    margin: 0;
+    //padding: 0;
+    background-image: url('https://images.pexels.com/photos/449751/pexels-photo-449751.jpeg?auto=compress&cs=tinysrgb&h=650&w=940');
+    background-repeat: no-repeat;
+    // width: 100%;
+    height: 100vh;
+    background-size: cover;   
+    background-attachment: fixed; 
+    // position:relative; 
+    // line-height: 1;
+}
+.my-ctnr{
+    background-color: rgba(255,255,255, 0.5);
+    height: 100vh;  
+    max-height: 100%;
+    padding-top: 2px;
+}
+.my-ctnr-main{
+    height: 100vh;
+}
+
+.my-row{
+    height: 90%;
+    // padding-top: 10px;
+}
+.my-img{
+    max-height: 100%;
+    
+}
+.my-form{
+    border: 1px solid #fff;
+    width: 200px;
+    
+}
+.my-dash-img{
+    height: 100px;
+    margin-top: -40px;
+
+}
+// .my-website-title{
+//     font-size: 1.5em;
+// }
+h2{
+    font-size: 1.5em;
+}
+.my-input{
+    border-radius: 5px;
+}
+.my-center{
+    margin: 0 auto;
+}
+.my-box{
+    width: 50%;
+    height: 100%;
+}
+.my-bg{
+    position: absolute;
+    top: 16%;
+    left: 10%;
+    width: 80%;
+    //overflow: hidden;
+    
+    // transform: translate(60%, -50%);
+}
+.my-bg-register{
+    display: block;
+}
+
+.my-holder{
+   height: 100%;
+}
+.my-dog-info{
+    width: 300px;
+    
+}
+.my-dog-subinfo{
+    width: 80%;
+}
+.my-text{
+    display: block;
+    font-size: 13px;
+}
+.my-link{
+    font-size: 13px;
+    display: inline-block;
+    color: #fff;
+    margin-bottom: 5px;
+}
+.my-content{
+    margin-top: 10px;
+}
+.my-big-text{
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+}
+.my-post-link{
+    color: black;
+    
+}
+.my-posts{
+    margin-top: 5%;
+}
+
+.my-post-info{
+    font-size: 15px;
+}
+
+.my-top-container{
+    
+    height: 25px;
+    background-color: rgb(22, 155, 196); 
+    left: 0;
+    width: 100vw;
+}
+.my-top-link{
+    margin-left: 10px;
+    color: white;
+    text-decoration: none !important;
+}
+.my-footer{
+    height: 20px;
+    background-color: gray;
+    position: absolute;
+    bottom: 20px;
+}
+.my-intro{
+    height: 200px;
+}
+.my-col{
+    max-height: 500px;
+}
+.my-top-margin{
+    margin-top: 5px;
+}
+
+@media (min-width: 766px){
+    .my-link, .my-text{
+        font-size: 20px;
+    }
+    .my-big-text{
+        font-size: 25px;
+    }
+    .my-top-link{
+        font-size: 20px;
+    }
+    .my-top-container{
+        height: 30px;;
+    }
+}
+@media (min-width: 1026px){
+    .my-box{
+        width: 20%;
+    }
+    .my-img{
+        max-height: 500px;
+    }
+  
+ 
+    
+}
+
+@media (min-width: 1023px){
+    .my-posts-text{
+        font-size: 20px;
+    }
+    
+}

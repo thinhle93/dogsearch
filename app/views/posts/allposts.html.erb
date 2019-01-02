@@ -1,0 +1,29 @@
+<div class="my-top-container">
+        <a class="my-top-link" href="/logout">Logout</a>
+        <a class="my-top-link" href="/users/find">Home</a>
+</div>
+<div class="my-ctnr container">
+    
+
+    <h1 class="my-big-text">Posts</h1>
+    
+        <a class="my-link btn btn-primary" href="/post/new">Create a new post</a>
+        <a class="my-link btn btn-primary" href="/post/mypost">My posts</a>
+        
+        <div class="my-posts">
+            <% @posts.each do |el| %>
+            <div>
+                <span class="my-posts-text"><a class="my-post-link" href="/post/find/<%= el.id %>"><%= el.title %></a> 
+                    
+                    <span class="my-post-info">
+                            by: <%= el.user.first_name%> <%= el.user.last_name%> <%= el.comments.length%> comments
+                    </span>
+                </span>
+            </div>
+            
+        <% end %>
+
+        </div>
+       
+    
+</div>

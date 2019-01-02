@@ -1,18 +1,47 @@
-<div>
-    <h1>Welome <%= @user.first_name%> <%= @user.last_name%></h1>
-
-    <div>
-        <button><a href="/users/find">Find another dog</a></button> <button><a href="/dog/saved">Saved dogs</a></button>
-        <h3>Here is a dog you may be interested in</h3>
-        <img src="<%= @nsw[0]['url'] %>" alt="dog picture">
+<div class="my-top-container">
+        <a class="my-top-link" href="/logout">Logout</a>
+</div>
+<div class="my-ctnr container">
+   
+   
+    
         <div>
-            <h3>About this dog:</h3>
-            <button><a href="/dog/save">Save this dog's information for later?</a></button>
-            <p>Name: <%= @nsw[0]['breeds'][0]['name'] %></p>
-            <p>Weight: <%= @nsw[0]['breeds'][0]['weight']['imperial'] %></p>
-            <p>Height: <%= @nsw[0]['breeds'][0]['height']['imperial'] %></p>
-            <p>Lfife Span: <%= @nsw[0]['breeds'][0]['life_span'] %></p>
-            <p>Breed Group: <%= @nsw[0]['breeds'][0]['breed_group'] %></p>
+            <img class="my-dash-img img-fluid" src="https://i.pinimg.com/originals/5e/48/c6/5e48c6ed0db25888e85f537b64e86b9c.gif" alt="">
+            <span class="my-big-text">Welome <%= @user.first_name%> <%= @user.last_name%></span>
+            
+            <a class="my-link btn btn-primary" href="/dog/saved">Saved dogs</a>
+            <a class="my-link btn btn-primary" href="/post/all">Look at Posts</a>
+            <a class="my-link btn btn-primary" href="/users/find">Find another dog</a> 
+            <a class="my-link btn btn-primary" href="/dog/save">Save dog's info</a>
         </div>
+           
+       
+
+      
+            <div class="row">
+                <div class="my-col col-12 col-lg-6">
+                        <span class="my-big-text">Here is a dog you may be interested in</span>
+                        <img class="img-fluid my-img" src="<%= @nsw[0]['url'] %>" alt="dog picture">
+                </div>
+                        
+                    
+                    <div class="my-col col-12 col-lg-6"> 
+                        <div class="my-dog-info">
+                            <div class="my-dog-subinfo">
+                                <span class="my-big-text">About this dog:</span>
+                                <span class="my-text">Name: <%= @nsw[0]['breeds'][0]['name'] %></span>
+                                <span class="my-text">Weight: <%= @nsw[0]['breeds'][0]['weight']['imperial'] %></span>
+                                <span class="my-text">Height: <%= @nsw[0]['breeds'][0]['height']['imperial'] %></span>
+                                <span class="my-text">Lfife Span: <%= @nsw[0]['breeds'][0]['life_span'] %></span>
+                                <span class="my-text">Breed Group: <%= @nsw[0]['breeds'][0]['breed_group'] %></span>
+                            </div>
+                                
+                        </div>                    
+                    </div>
+            </div>
+    
+        
+           
     </div>
+
 </div>

@@ -2,6 +2,8 @@ class User < ApplicationRecord
   has_secure_password
 
   has_many :saved_dogs
+  has_many :posts
+  has_many :comments
 
   email_regex = /\A([\w+-].?)+@[a-z\d-]+(.[a-z]+)*.[a-z]+\z/i
   validates :email, presence: true, uniqueness: true, format: { with: email_regex }

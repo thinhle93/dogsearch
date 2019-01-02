@@ -1,53 +1,28 @@
-<div>
-    <div>
-        <h2>Sign In</h2>
-        <div>
-            <form action="/users/login" method="post">
-                <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-                <div>
-                    <div >
-                        <label for="">Email</label>
-                        <input  type="text" placeholder="Enter Email" name="email">
-                        <label for="">Password</label>
-                        <input  type="password" placeholder="Enter Password" name="password">
-                        <button type="submit">Register</button>
-                    </div>
+<div class=" container">
+    
+    <div class="my-bg">
+                     
+            <h1 class="my-website-title">DogCentral</h1>
+                   <div class="my-box">
+                        <h2>Sign In</h2>
+                        <form action="/users/login" method="post">
+                            <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+                                <div class="form-group">
+                                    <label for="">Email</label>
+                                    <input  type="text" class="form-control"  placeholder="Enter Email" name="email">
+                                    <label for="">Password</label>
+                                    <input  type="password" class="form-control" placeholder="Enter Password" name="password">
+                                    <button type="submit" class="my-top-margin btn btn-primary">Sign In</button>
+                                </div> 
+                                <p><a href="/users/registerpage">Don't have an account? Register here.</a></p>  
+                        </form>
+                        <% if flash[:errors]%>
+                                <% flash[:errors].each do |err|%>
+                                <p><%= err%></p>
+                                <%end%>
+                                <%end%>
+                   </div>
+                        
+                        
                 </div>
-            </form>
-        </div>
-    </div>
-
-
-    <div>
-        <h2>Don't have and account? Register here.</h2>
-        <div>
-            <form action="/users/register" method="post">
-                <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-                <div class="row">
-                    <div class="form-group col-lg-2">
-                        <label for="">First Name</label>
-                        <input type="text" class="form-control" placeholder="Enter First Name" name="user[first_name]">
-                        <label for="">Last Name</label>
-                        <input type="text" class="form-control" placeholder="Enter Last Name" name=user[last_name]>
-                        <label for="">Email</label>
-                        <input class="form-control" type="text" placeholder="Enter Email" name="user[email]">
-                        <label for="">Password</label>
-                        <input class="form-control" type="password" placeholder="Enter Password" name="user[password]">
-                        <label for="">Confirm Password</label>
-                        <input type="password" class="form-control" placeholder="Retype Password" name="user[password_confirmation]">
-                        <button type="submit" class="btn btn-primary">Register</button>
-                    </div>
-                </div>
-                
-                
-            </form>
-            <div>
-                    <% if flash[:errors]%>
-                    <% flash[:errors].each do |err|%>
-                    <p><%= err%></p>
-                    <%end%>
-                    <%end%>
-            </div>
-        </div>
-    </div>
 </div>

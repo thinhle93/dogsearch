@@ -1,0 +1,45 @@
+<div class="my-ctnr-main container">
+        
+        <div class="my-bg">
+                <div class="my-bg-register">
+                        <h1 class="my-website-title">DogCentral</h1>
+                        <div class="my-box">
+                                <h2>Register</h2>
+                                <div class="my-form">
+                                        <form action="/users/register" method="post">
+                                                <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+                                                <div class="form-group">
+                                                <label for="">First Name</label>
+                                                <input type="text" class="form-control" placeholder="Enter First Name" name="user[first_name]">
+                                                <label for="">Last Name</label>
+                                                <input type="text"  class="form-control" placeholder="Enter Last Name" name=user[last_name]>
+                                                <label for="">Email</label>
+                                                <input  type="text" class="form-control" placeholder="Enter Email" name="user[email]">
+                                                <label for="">Password</label>
+                                                <input  type="password" class="form-control" placeholder="Enter Password" name="user[password]">
+                                                <label for="">Confirm Password</label>
+                                                <input type="password"  class="form-control" placeholder="Retype Password" name="user[password_confirmation]">
+                                                <button type="submit" class="my-top-margin btn btn-primary">Register</button>
+                                                </div>                                 
+                                                                        
+                                        </form>
+                                </div>
+                                
+                                <p><a href="/users/index">Cancel</a></p> 
+                        </div>
+                </div>
+                <div class="my-bg-register">
+                        <% if flash[:errors]%>
+                        <% flash[:errors].each do |err|%>
+                        <p><%= err%></p>
+                        <%end%>
+                        <%end%>
+                </div>
+                
+            </div>
+        
+</div>
+    
+            
+   
+    

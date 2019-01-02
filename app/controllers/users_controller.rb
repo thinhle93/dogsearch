@@ -6,6 +6,7 @@ require 'apiCall'
 
 class UsersController < ApplicationController
 
+    skip_before_action :require_login, only: [:index,:registerpage, :login, :register]
   def index
     # character = HTTParty.get('https://swapi.co/api/people/1/')
     # @name = character['name']
@@ -35,7 +36,7 @@ class UsersController < ApplicationController
             #     puts user_params[:password_confirmation]
             #     flash[:errors] << "Passwords do not match!"
             # end
-            redirect_to "/"
+            redirect_to "/users/registerpage"
         else
             
             session[:userid] = user.id
@@ -67,6 +68,10 @@ class UsersController < ApplicationController
         end 
   end
 
+  def logout
+    session[:userid] = nil
+    redirect_to '/'
+  end
 
   private
     def user_params
